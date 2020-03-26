@@ -6,17 +6,35 @@ import Tab from "@material-ui/core/Tab";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import { fetchPopularRepos } from "../utils/Api";
 import LanguageCard from "./LanguageCard";
+import Grid from "@material-ui/core/Grid";
+const useStyles = makeStyles(theme => ({
+  root: {
+    flexGrow: 1
+  },
+  paper: {
+    height: 140,
+    width: 100
+  },
+  control: {
+    padding: theme.spacing(2)
+  }
+}));
 
 const languages = ["All", "JavaScript", "Ruby", "Java", "CSS", "Python"];
 
 function BodyGrid({ repos }) {
+  const [spacing, setSpacing] = React.useState(2);
+  const classes = useStyles();
   return (
-    <ul>
-      {repos.map((repo, index) => {
-        
-        return(<LanguageCard key={index} repo={repo} index={index}/>);
-      })}
-    </ul>
+    <Grid container className={classes.root} spacing={2}>
+      <Grid item xs={12}>
+        <Grid container justify="center" spacing={spacing}>
+          {repos.map((repo, index) => {
+            return <LanguageCard key={index} repo={repo} index={index} />;
+          })}
+        </Grid>
+      </Grid>
+    </Grid>
   );
 }
 
