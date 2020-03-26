@@ -1,12 +1,11 @@
 import React from 'react';
+import Popular from './components/Popular';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        
-      </header>
+      <Popular />
     </div>
   );
 }
