@@ -64,7 +64,7 @@ const LanguageCard = ({ repo, index }) => {
           </Box>
         </Box>
         <Link href={html_url} variant="body2" target="_blank" rel="noreferrer">
-          visit
+          #{index+1}
         </Link>
       </CardContent>
     </Card>

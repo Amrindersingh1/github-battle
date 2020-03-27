@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const languages = ["All", "JavaScript", "Ruby", "Java", "CSS", "Python"];
+const languages = ["All", "JavaScript", "Ruby", "Java", "Javascript", "Python", "Dart"];
 
 function BodyGrid({ repos }) {
   const [spacing, setSpacing] = React.useState(2);

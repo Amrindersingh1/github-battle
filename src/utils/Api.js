@@ -1,5 +1,5 @@
 export function fetchPopularRepos (language) {
-    const languages = ["All", "JavaScript", "Ruby", "Java", "CSS", "Python"];
+    const languages = ["All", "JavaScript", "Ruby", "Java", "Javascript", "Python", "Dart"];
     const endpoint = window.encodeURI(`https://api.github.com/search/repositories?q=stars:>1+language:${languages[language]}&sort=stars&order=desc&type=Repositories`)
   
     return fetch(endpoint)
